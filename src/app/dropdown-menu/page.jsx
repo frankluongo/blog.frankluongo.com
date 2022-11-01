@@ -83,7 +83,7 @@ const DropdownMenu = () => {
         </section>
         <section>
           <h3>
-            The <code>Dropdown Element</code> Function
+            The <code>DropdownElement</code> Function
           </h3>
           <p>
             This function listens for when the <code>parent</code> of the

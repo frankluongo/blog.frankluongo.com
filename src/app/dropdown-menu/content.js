@@ -10,8 +10,7 @@ export const css = `.menu-item {
 
 .menu-item-has-children[aria-expanded=true] .sub-menu {
   display: block;
-}
-`;
+}`;
 
 export const html = `<header data-dropdown=".menu-item-has-children">
   <ul class="dropdown-menu">
@@ -39,25 +38,20 @@ export const html = `<header data-dropdown=".menu-item-has-children">
       <a href="/policies-rules/">Policies and Rules</a>
     </li>
   </ul>
-</header>
-`;
+</header>`;
 
 export const javascript = {
-  dropdowns: `
-function Dropdowns() {
+  dropdowns: `function Dropdowns() {
   const dropdowns = document.querySelectorAll("[data-dropdown]");
   if (!dropdowns) return;
   dropdowns.forEach(Dropdown);
 }`,
-  dropdown: `
-function Dropdown(wrapper) {
+  dropdown: `function Dropdown(wrapper) {
   const elSelector = wrapper.dataset.dropdown;
   const elements = wrapper.querySelectorAll(elSelector);
   elements.forEach(DropdownElement);
-}
-`,
-  dropdownElement: `
-function DropdownElement(el) {
+}`,
+  dropdownElement: `function DropdownElement(el) {
   const subMenu = el.querySelector("ul");
   if (!subMenu) return;
   const subMenuId = \`submenu-\${el.id}\` || \`submenu-\${Math.random()}\`;
@@ -106,8 +100,7 @@ function DropdownElement(el) {
     closeSubMenu();
     el.classList.remove("has-focus");
   });
-}
-`,
+}`,
 };
 
 export const title = "How To Build a Dropdown Menu with Vanilla JavaScript";
