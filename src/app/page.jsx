@@ -1,14 +1,16 @@
+import { Heading } from "./components/Heading";
 import { InternalLink } from "./components/InternalLink";
+import { Paragraph } from "./components/Paragraph";
 
 export default function Home() {
   return (
     <div className="container blog">
-      <h1>Welcome to the blog!</h1>
-      <p>
+      <Heading>Welcome to the blog!</Heading>
+      <Paragraph>
         <InternalLink href="/dropdown-menu">
           Read my first post here
         </InternalLink>
-      </p>
+      </Paragraph>
     </div>
   );
 }
