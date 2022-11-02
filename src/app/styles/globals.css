@@ -47,9 +47,6 @@
     var(--color-teal) 0%,
     var(--color-blue) 100%
   );
-  /* ? FONTS */
-  --font-sans-serif: "Silka Web", sans-serif;
-  --font-serif: "Knile Web", serif;
   /* ? SETTINGS */
   --wrapper-width: 86rem;
   --container-width: 59rem;

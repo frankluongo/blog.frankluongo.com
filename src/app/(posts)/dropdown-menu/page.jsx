@@ -1,6 +1,8 @@
 import { Code } from "#components/Code";
 import { CodeBlock } from "#components/CodeBlock";
+import { Heading } from "#components/Heading";
 import { Paragraph } from "#components/Paragraph";
+import { ExternalLink } from "../../components/ExternalLink";
 
 import { css, html, javascript, title } from "./content";
 
@@ -8,7 +10,7 @@ const DropdownMenu = () => {
   return (
     <div className="container blog block-gap:2">
       <header>
-        <h1>{title}</h1>
+        <Heading>{title}</Heading>
       </header>
       <section>
         <Paragraph>
@@ -18,30 +20,22 @@ const DropdownMenu = () => {
           dropdown menus.
         </Paragraph>
         <Paragraph>
-          <a
-            href="https://github.com/frankluongo/vanilla-component-library/tree/main/src/dropdown"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/frankluongo/vanilla-component-library/tree/main/src/dropdown">
             View Source Code on GitHub.
-          </a>
+          </ExternalLink>
         </Paragraph>
       </section>
       <section>
-        <h2>The HTML</h2>
+        <Heading size={2}>The HTML</Heading>
         <Paragraph>
-          <a
-            href="https://github.com/frankluongo/vanilla-component-library/blob/main/src/dropdown/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/frankluongo/vanilla-component-library/blob/main/src/dropdown/index.html">
             View HTML on GitHub.
-          </a>
+          </ExternalLink>
         </Paragraph>
         <CodeBlock>{html}</CodeBlock>
       </section>
       <section>
-        <h2>The CSS</h2>
+        <Heading size={2}>The CSS</Heading>
         <Paragraph>
           We need to make sure the the <Code>.menu-item</Code> has a relative
           position and make sure we show our <Code>.sub-menu</Code> when{" "}
@@ -51,16 +45,12 @@ const DropdownMenu = () => {
         <CodeBlock>{css}</CodeBlock>
       </section>
       <section>
-        <h2>The JavaScript</h2>
-        <h3>Dropdowns</h3>
+        <Heading size={2}>The JavaScript</Heading>
+        <Heading size={3}>Dropdowns</Heading>
         <Paragraph>
-          <a
-            href="https://github.com/frankluongo/vanilla-component-library/blob/main/src/dropdown/app.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/frankluongo/vanilla-component-library/blob/main/src/dropdown/app.js">
             Full file on GitHub.
-          </a>
+          </ExternalLink>
         </Paragraph>
         <Paragraph>
           First, we need to check for out <Code>data-dropdown</Code> element(s)
@@ -74,9 +64,9 @@ const DropdownMenu = () => {
         <CodeBlock>{javascript.dropdowns}</CodeBlock>
       </section>
       <section>
-        <h3>
+        <Heading size={3}>
           The <Code>Dropdown</Code> Function
-        </h3>
+        </Heading>
         <Paragraph>
           This function gets every HTML element we expect to have a dropdown
           menu, and passes them to our <Code>DropdownElement</Code> function
@@ -85,9 +75,9 @@ const DropdownMenu = () => {
         <CodeBlock>{javascript.dropdown}</CodeBlock>
       </section>
       <section>
-        <h3>
+        <Heading size={3}>
           The <Code>DropdownElement</Code> Function
-        </h3>
+        </Heading>
         <Paragraph>
           This function listens for when the <Code>parent</Code> of the submenu
           is <Code>focus</Code>&apos;ed, <Code>hover</Code>&apos;ed,{" "}
