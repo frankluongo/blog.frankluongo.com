@@ -38,14 +38,3 @@ export const silkaMonoRegular = localFont({
   // style: "normal",
   // variable: "--silka-mono-regular",
 });
-
-export const fontVars = [
-  silkaBlack,
-  silkaBold,
-  silkaBoldItalic,
-  silkaRegular,
-  silkaRegularItalic,
-  silkaMonoRegular,
-]
-  .map((font) => font.variable)
-  .join(" ");
