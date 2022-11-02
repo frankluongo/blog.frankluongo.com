@@ -15,7 +15,7 @@ const DropdownMenu = () => {
       <section>
         <Paragraph>
           So, let&apos;s say you&apos;re working within a framework, like
-          WordPress, and you don&apos; have great access to some generated code.
+          WordPress, and you don&apos;t have great access to the generated code.
           Here&apos;s how you might work around that to implement some nifty
           dropdown menus.
         </Paragraph>
