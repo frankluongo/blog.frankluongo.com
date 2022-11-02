@@ -63,7 +63,7 @@ body {
   padding: 0;
   margin: 0;
   color: var(--theme-text-color);
-  font-family: var(--silka-regular);
+  font-family: var(--silka-regular, "sans-serif");
 }
 
 /* ? ELEMENT STYLES */
