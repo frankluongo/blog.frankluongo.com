@@ -3,6 +3,7 @@ import Link from "next/link";
 import { silkaRegular } from "./fonts/fonts";
 
 import { ExternalLink } from "./components/ExternalLink";
+import { InternalLink } from "./components/InternalLink";
 
 import css from "./styles/Header.module.css";
 import "./styles/globals.css";
@@ -26,7 +27,7 @@ function Header() {
     <header className={css.Header}>
       <nav className="container blog flex gap:1">
         <ExternalLink href="https://frankluongo.com">Home</ExternalLink>
-        <Link href="/">All Posts</Link>
+        <InternalLink href="/">All Posts</InternalLink>
       </nav>
     </header>
   );
