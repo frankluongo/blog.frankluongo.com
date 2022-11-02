@@ -10,7 +10,7 @@ import "./styles/globals.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={silkaRegular.variable}>
+    <html lang="en" className={silkaRegular.className}>
       <head>
         <title>FLDC | Blog</title>
       </head>
