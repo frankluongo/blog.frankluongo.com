@@ -23,7 +23,7 @@ export const silkaRegular = localFont({
   // weight: "400",
   // style: "normal",
   // variable: "--silka-regular",
-  // fallback: "Silka Regular, sans-serif",
+  fallback: ["sans-serif"],
 });
 export const silkaRegularItalic = localFont({
   src: "./silka/silka-regularitalic.woff2",
