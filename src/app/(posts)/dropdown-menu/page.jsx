@@ -1,3 +1,6 @@
+import { Code } from "#components/Code";
+import { CodeBlock } from "#components/CodeBlock";
+
 import { css, html, javascript, title } from "./content";
 
 const DropdownMenu = () => {
@@ -9,9 +12,9 @@ const DropdownMenu = () => {
       <section>
         <p>
           So, let&apos;s say you&apos;re working within a framework, like
-          WordPress, and you don&apos; have great access to some generated code.
-          Here&apos;s how you might work around that to implement some nifty
-          dropdown menus.
+          WordCodeBlockss, and you don&apos; have great access to some generated
+          code. Here&apos;s how you might work around that to implement some
+          nifty dropdown menus.
         </p>
         <p>
           <a
@@ -34,17 +37,17 @@ const DropdownMenu = () => {
             View HTML on GitHub.
           </a>
         </p>
-        <pre>{html}</pre>
+        <CodeBlock>{html}</CodeBlock>
       </section>
       <section>
         <h2>The CSS</h2>
         <p>
-          We need to make sure the the <code>.menu-item</code> has a relative
-          position and make sure we show our <code>.sub-menu</code> when{" "}
-          <code>aria-active</code> is <code>true</code>
+          We need to make sure the the <Code>.menu-item</Code> has a relative
+          position and make sure we show our <Code>.sub-menu</Code> when{" "}
+          <Code>aria-active</Code> is <Code>true</Code>
         </p>
         <p>We&apos;ll handle setting that up via JavaScript.</p>
-        <pre>{css}</pre>
+        <CodeBlock>{css}</CodeBlock>
       </section>
       <section>
         <h2>The JavaScript</h2>
@@ -59,38 +62,38 @@ const DropdownMenu = () => {
           </a>
         </p>
         <p>
-          First, we need to check for out <code>data-dropdown</code> element(s)
+          First, we need to check for out <Code>data-dropdown</Code> element(s)
           to see if the exist.
         </p>
         <p>
           If they don&apos;t, we return early. Otherwise, we get each of our{" "}
-          <code>data-dropdown</code> elements and pass them to our{" "}
-          <code>Dropdown</code> function.
+          <Code>data-dropdown</Code> elements and pass them to our{" "}
+          <Code>Dropdown</Code> function.
         </p>
-        <pre>{javascript.dropdowns}</pre>
+        <CodeBlock>{javascript.dropdowns}</CodeBlock>
       </section>
       <section>
         <h3>
-          The <code>Dropdown</code> Function
+          The <Code>Dropdown</Code> Function
         </h3>
         <p>
           This function gets every HTML element we expect to have a dropdown
-          menu, and passes them to our <code>DropdownElement</code> function
+          menu, and passes them to our <Code>DropdownElement</Code> function
           where we can <em>finally</em> get to work!
         </p>
-        <pre>{javascript.dropdown}</pre>
+        <CodeBlock>{javascript.dropdown}</CodeBlock>
       </section>
       <section>
         <h3>
-          The <code>DropdownElement</code> Function
+          The <Code>DropdownElement</Code> Function
         </h3>
         <p>
-          This function listens for when the <code>parent</code> of the submenu
-          is <code>focus</code>&apos;ed, <code>hover</code>&apos;ed,{" "}
-          <code>touch</code>&apos;ed, or <code>click</code>&apos;ed and reacts
+          This function listens for when the <Code>parent</Code> of the submenu
+          is <Code>focus</Code>&apos;ed, <Code>hover</Code>&apos;ed,{" "}
+          <Code>touch</Code>&apos;ed, or <Code>click</Code>&apos;ed and reacts
           accordingly.
         </p>
-        <pre>{javascript.dropdownElement}</pre>
+        <CodeBlock>{javascript.dropdownElement}</CodeBlock>
       </section>
     </div>
   );
