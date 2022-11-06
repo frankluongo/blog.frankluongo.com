@@ -1,5 +1,5 @@
-import { title } from "./content";
-
 export default function Head() {
-  return <title>FLDC Blog | {title}</title>;
+  return (
+    <title>FLDC | How To Build a Dropdown Menu with Vanilla JavaScript</title>
+  );
 }
