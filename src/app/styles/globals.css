@@ -112,6 +112,7 @@ h4 {
 }
 
 p {
+  display: block;
   line-height: 1.6;
 }
 
@@ -131,8 +132,16 @@ pre {
 /* ? CLASSES */
 /* * ============================================================= */
 
+.block-gap\:1 > * + * {
+  margin-top: 1rem;
+}
+
 .block-gap\:2 > * + * {
   margin-top: 2rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .container {
@@ -154,4 +163,8 @@ pre {
 
 .gap\:1 {
   gap: 1rem;
+}
+
+.italic {
+  font-style: italic;
 }

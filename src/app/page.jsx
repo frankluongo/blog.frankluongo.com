@@ -1,16 +1,29 @@
-import { Heading } from "./components/Heading";
-import { InternalLink } from "./components/InternalLink";
-import { Paragraph } from "./components/Paragraph";
+import { notionQueryDb } from "./lib/notion";
 
-export default function Home() {
+import { NotionHeading } from "#components/NotionHeading";
+import { Post } from "#components/Post";
+
+async function fetchPosts() {
+  return await notionQueryDb();
+}
+
+export default async function Home() {
+  const mockHeading = {
+    type: "heading_1",
+    heading_1: { rich_text: [{ text: { content: "Welcome to the blog!" } }] },
+  };
+  const data = await fetchPosts();
+  const posts = data.results || [];
   return (
     <div className="container blog">
-      <Heading>Welcome to the blog!</Heading>
-      <Paragraph>
-        <InternalLink href="/dropdown-menu">
-          Read my first post here
-        </InternalLink>
-      </Paragraph>
+      <NotionHeading {...mockHeading} />
+      <ul className="block-gap:2">
+        {posts.map((post, i) => (
+          <li key={`${post?.id}-${i}`}>
+            <Post post={post} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
