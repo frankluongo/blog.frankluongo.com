@@ -12,8 +12,7 @@ export default async function Home() {
     type: "heading_1",
     heading_1: { rich_text: [{ text: { content: "Welcome to the blog!" } }] },
   };
-  const data = await fetchPosts();
-  const posts = data.results || [];
+  const posts = await fetchPosts();
   return (
     <div className="container blog">
       <NotionHeading {...mockHeading} />
